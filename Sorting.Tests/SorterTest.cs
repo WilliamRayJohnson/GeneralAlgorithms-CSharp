@@ -22,5 +22,24 @@ namespace Algorithms.UnitTests.Sorting
 
             Assert.Equal(expectedSortedArray, actaulSortedArray);
         }
+
+        [Fact]
+        public void testBubbleSortAlreadySorted()
+        {
+            int[] expectedSortedArray = {0,1,3,4,10,33,55};
+            int[] actaulSortedArray = sorter.bubbleSort(expectedSortedArray);
+
+            Assert.Equal(expectedSortedArray, actaulSortedArray);
+        }
+
+        [Fact]
+        public void testEnhancedBubbleSort()
+        {
+            int[] data = {4,55,33,10,3,1,0};
+            int[] expectedSortedArray = {0,1,3,4,10,33,55};
+            int[] actaulSortedArray = sorter.enhancedBubbleSort(data);
+
+            Assert.Equal(expectedSortedArray, actaulSortedArray);
+        }
     }
 }
