@@ -29,7 +29,27 @@ namespace Algorithms.Sorting
 
         public int[] enhancedBubbleSort(int[] data)
         {
-            return null;
+            bool swapMade = true;
+            int tempValue;
+            int unsortedValueCount = data.Length;
+
+            while (swapMade & unsortedValueCount > 1)
+            {
+                swapMade = false;
+                for (int i = 0; i <= (unsortedValueCount - 2); i++)
+                {
+                    if (data[i] > data[i+1])
+                    {
+                        tempValue = data[i];
+                        data[i] = data[i+1];
+                        data[i+1] = tempValue;
+                        swapMade = true;
+                    }
+                }
+                unsortedValueCount--;
+            }
+
+            return data;
         }
     }
 }
